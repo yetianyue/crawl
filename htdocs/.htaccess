@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteRule public/(.*)$ public/$1 [L]
+RewriteRule exp/(.*)$ exp/$1 [L]
+RewriteRule api/(.*)$ api/$1 [L]
+RewriteRule upload/(.*)$ upload/$1 [L]
+RewriteRule static/(.*)$ static/$1 [L]
+RewriteRule crt/(.*)$ crt/$1 [L]
+RewriteCond $1 !^(index\.php|images|css|upload|js|robots\.txt|webscan*)
+RewriteRule ^(.*)$ index.php/$1 [L]
